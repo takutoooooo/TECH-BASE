@@ -40,7 +40,7 @@
                 $FirstEditNumber = $_POST["FirstEditNumber"];
             } 
             if(!empty($FirstEditNumber)){
-                $id = $FirstEditNumber; // idがこの値のデータだけを抽出したい、とする
+                $id = $FirstEditNumber; // idがこの値のデータだけを抽出したい
                 $sql = 'SELECT * FROM '.$DatabaseName.' WHERE id=:id';
                 $stmt = $pdo->prepare($sql);                  // ←差し替えるパラメータを含めて記述したSQLを準備し、
                 $stmt->bindParam(':id', $id, PDO::PARAM_INT); // ←その差し替えるパラメータの値を指定してから、
